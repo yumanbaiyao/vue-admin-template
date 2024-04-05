@@ -5,7 +5,12 @@ const state = {
     opened: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true,
     withoutAnimation: false
   },
-  device: 'desktop'
+  device: 'desktop',
+  routers: [{
+        path: '/form',
+        component: () => import('@/views/form/index'),
+        meta: {title: '组织机构222', icon: 'table'}
+        }]
 }
 
 const mutations = {
